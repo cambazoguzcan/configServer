@@ -1,4 +1,4 @@
 ogi:
-  deneme: 0
+  deneme: 10
 feature-flags:
   gitProcess: true
