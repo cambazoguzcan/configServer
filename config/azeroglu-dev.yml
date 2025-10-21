@@ -1,2 +1,4 @@
+ogi:
+  deneme: 5
 feature-flags:
   gitProcess: true
