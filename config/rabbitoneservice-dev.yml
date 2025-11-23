@@ -2,3 +2,17 @@ ogi:
   deneme: 8
 feature-flags:
   gitProcess: true
+messaging:
+  enabled: true
+  queues:
+    rabbit_one_queue:
+      enabled: true
+      durable: true
+      name: rabbit_one_queue
+      routingKey: rabbit_one_queue_rk
+      exchangeName: rabbit_one_queue_exchange
+      withDlq: false
+      exchange:
+        name: rabbit_one_queue_exchange
+        durable: true
+        type: direct
