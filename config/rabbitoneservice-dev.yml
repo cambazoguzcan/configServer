@@ -6,7 +6,7 @@ messaging:
   enabled: true
   queues:
     rabbit_one_queue:
-      enabled: true
+      enable: true
       durable: true
       name: rabbit_one_queue
       routingKey: rabbit_one_queue_rk
