@@ -16,3 +16,16 @@ messaging:
         name: rabbit_one_queue_exchange
         durable: true
         type: direct
+    rabbit_two_queue:
+      enable: true
+      durable: true
+      name: rabbit_two_queue
+      routingKey: rabbit_two_queue_rk
+      exchangeName: rabbit_two_queue_exchange
+      withDlq: true
+      dlqName: rabbit_two_queue_dlq
+      dlqRoutingKey: rabbit_two_queue_dlq_rk
+      exchange:
+        name: rabbit_two_queue_exchange
+        durable: true
+        type: direct
