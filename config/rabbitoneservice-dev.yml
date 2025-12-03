@@ -29,14 +29,3 @@ messaging:
         name: rabbit_two_queue_exchange
         durable: true
         type: direct
-    rabbit_two_retry:
-      enable: true
-      durable: true
-      name: rabbit_two_retry_queue
-      routingKey: rabbit_two_queue_rk
-      exchangeName: rabbit_two_queue_exchange
-      withDlq: false
-      exchange:
-        name: rabbit_two_queue_exchange
-        durable: true
-        type: direct
