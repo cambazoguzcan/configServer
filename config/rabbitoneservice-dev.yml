@@ -25,6 +25,7 @@ messaging:
       withDlq: true
       dlqName: rabbit_two_queue_dlq
       dlqRoutingKey: rabbit_two_queue_dlq_rk
+      dlqTtl: 3000
       exchange:
         name: rabbit_two_queue_exchange
         durable: true
