@@ -28,11 +28,6 @@ messaging:
       dlqName: rabbit_two_queue_dlq
       dlqRoutingKey: rabbit_two_queue_dlq_rk
       retryCount: 3
-      dlqArguments:
-        x-dead-letter-exchange: rabbit_two_queue_exchange
-        x-dead-letter-routing-key: rabbit_two_queue_rk # main queue roting key
-        x-message-ttl: 3000 # It will drop to the main queue after 3 seconds.
-        x-queue-mode: lazy      
       exchange:
         name: rabbit_two_queue_exchange
         durable: true
