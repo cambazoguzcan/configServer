@@ -20,6 +20,10 @@ messaging:
       durable: true
       name: rabbit_two_queue
       routingKey: rabbit_two_queue_rk
+      arguments:
+        x-dead-letter-exchange: rabbit_two_queue_exchange
+        x-dead-letter-routing-key: rabbit_two_queue_dlq_rk
+        x-queue-mode: lazy
       withDlq: true
       dlqName: rabbit_two_queue_dlq
       dlqRoutingKey: rabbit_two_queue_dlq_rk
