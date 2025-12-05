@@ -5,7 +5,7 @@ feature-flags:
 messaging:
   enabled: true
   queues:
-    rabbit_one_queue:
+    rabbit_one_queue: # main queue
       enable: true
       durable: true
       name: rabbit_one_queue
@@ -15,7 +15,7 @@ messaging:
         name: rabbit_one_queue_exchange
         durable: true
         type: direct
-    rabbit_two_queue:
+    rabbit_two_queue: # main queue with dlq
       enable: true
       durable: true
       name: rabbit_two_queue
