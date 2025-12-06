@@ -31,3 +31,27 @@ messaging:
         name: rabbit_two_queue_exchange
         durable: true
         type: direct
+    rabbit_third_queue: # main queue with retry and paking queue
+      enable: true
+      durable: true
+      name: rabbit_third_queue
+      routingKey: rabbit_third_queue_rk
+      arguments:
+        x-dead-letter-exchange: rabbit_third_queue_exchange
+        x-dead-letter-routing-key: rabbit_third_queue_retry_rk
+        x-queue-mode: lazy
+      withDlq: true
+      dlqName: rabbit_third_queue_dlq
+      dlqRoutingKey: rabbit_third_queue_dlq_rk
+      withRetry: true
+      retryName: rabbit_third_queue_retry
+      retryRoutingKey: rabbit_third_queue_retry_rk
+      retryArguments:
+        x-dead-letter-exchange: rabbit_third_queue_exchange
+        x-dead-letter-routing-key: rabbit_third_queue_rk
+        x-message-ttl: 3000
+        x-queue-mode: lazy        
+      exchange:
+        name: rabbit_third_queue_exchange
+        durable: true
+        type: direct
