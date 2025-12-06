@@ -50,7 +50,8 @@ messaging:
         x-dead-letter-exchange: rabbit_third_queue_exchange
         x-dead-letter-routing-key: rabbit_third_queue_rk
         x-message-ttl: 3000
-        x-queue-mode: lazy        
+        x-queue-mode: lazy
+      retryCount: 3
       exchange:
         name: rabbit_third_queue_exchange
         durable: true
