@@ -56,3 +56,15 @@ messaging:
         name: rabbit_third_queue_exchange
         durable: true
         type: direct
+    rabbit_fourth_queue: # priority queue
+      enable: true
+      durable: true
+      name: rabbit_fourth_queue
+      routingKey: rabbit_fourth_queue_rk
+      arguments:
+        x-max-priority: 10
+      withDlq: false
+      exchange:
+        name: rabbit_fourth_queue_exchange
+        durable: true
+        type: direct
