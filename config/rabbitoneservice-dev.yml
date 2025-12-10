@@ -79,3 +79,13 @@ messaging:
         name: rabbit_fifth_queue_exchange
         durable: true
         type: direct
+    rabbit_sixth_queue: # bulk consumer
+      enable: true
+      durable: true
+      name: rabbit_sixth_queue
+      routingKey: rabbit_sixth_queue_rk
+      withDlq: false
+      exchange:
+        name: rabbit_sixth_queue_exchange
+        durable: true
+        type: direct
