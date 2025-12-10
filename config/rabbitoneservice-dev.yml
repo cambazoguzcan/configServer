@@ -68,3 +68,14 @@ messaging:
         name: rabbit_fourth_queue_exchange
         durable: true
         type: direct
+    rabbit_fifth_queue: # auto scaling consumer
+      enable: true
+      durable: true
+      name: rabbit_fifth_queue
+      routingKey: rabbit_fifth_queue_rk
+      withDlq: false
+      concurrency: 1-5
+      exchange:
+        name: rabbit_fifth_queue_exchange
+        durable: true
+        type: direct
