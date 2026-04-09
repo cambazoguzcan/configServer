@@ -1,2 +1,2 @@
 feature-flags:
-  outboxRelayEnable: false
+  outboxRelayEnable: true
