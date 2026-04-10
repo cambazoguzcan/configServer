@@ -3,13 +3,14 @@ feature-flags:
 messaging:
   enabled: true
   queues:
-    account_create_queue: # account create queue
+    account_multi_queue: # account generic queue
+      queueCount: 3
       enable: true
       durable: true
-      name: account_create_queue
-      routingKey: account_create_queue_rk
+      name: account_multi_queue
+      routingKey: account_multi_queue_rk
       withDlq: false
       exchange:
-        name: account_create_queue_exchange
+        name: account_multi_queue_exchange
         durable: true
         type: direct  
