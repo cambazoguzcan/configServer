@@ -1,2 +1,15 @@
 feature-flags:
   outboxRelayEnable: true
+messaging:
+  enabled: true
+  queues:
+    account_create_queue: # account create queue
+      enable: true
+      durable: true
+      name: account_create_queue
+      routingKey: account_create_queue_rk
+      withDlq: false
+      exchange:
+        name: account_create_queue_exchange
+        durable: true
+        type: direct  
