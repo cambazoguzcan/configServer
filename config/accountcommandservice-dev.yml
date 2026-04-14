@@ -13,4 +13,4 @@ messaging:
       exchange:
         name: account_multi_queue_exchange
         durable: true
-        type: direct  
+        type: x-consistent-hash
