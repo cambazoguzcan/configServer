@@ -25,3 +25,5 @@ messaging:
         name: account_multi_queue_exchange
         durable: true
         type: x-consistent-hash
+      arguments:
+        hash-header: accountNo  
