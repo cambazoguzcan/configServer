@@ -3,7 +3,18 @@ feature-flags:
 messaging:
   enabled: true
   queues:
-    account_multi_queue: # account generic queue
+    account_general_queue: # account general queue
+      queueCount: 1
+      enable: true
+      durable: true
+      name: account_general_queue
+      routingKey: account_general_queue_rk
+      withDlq: false
+      exchange:
+        name: account_general_queue_exchange
+        durable: true
+        type: direct
+    account_multi_queue: # account multi queue
       queueCount: 3
       enable: true
       durable: true
@@ -13,4 +24,4 @@ messaging:
       exchange:
         name: account_multi_queue_exchange
         durable: true
-        type: direct
+        type: x-consistent-hash
