@@ -2,6 +2,7 @@ feature-flags:
   outboxRelayEnable: true
   outboxRelayFixedDelay: 3000
   outboxPageSize: 1000
+  maxRetryAttempts: 3
 messaging:
   enabled: true
   queues:
