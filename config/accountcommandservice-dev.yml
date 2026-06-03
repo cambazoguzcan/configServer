@@ -1,10 +1,10 @@
 spring:
   datasource:
-    username: '{cipher}AQAqBjB3Z8kKxFnQ2pL9mR4sT6vW8yZaBcDeFgHiJkLmNoPqRsT'
-    password: '{cipher}AQBxYzA1B2cD3eF4gH5iJ6kL7mN8oP9qR0sT1uV2wX3yZ4aB5cD'
+    username: root
+    password: Rcoc2308
   rabbitmq:
-    username: '{cipher}AQCdEfG2hI3jK4lM5nO6pQ7rS8tU9vW0xY1zAaBbCcDdEeFf'
-    password: '{cipher}AQDgHiJ3kL4mN5oP6qR7sT8uV9wX0yZ1aAbBcCdDeEeFfGg'
+    username: guest
+    password: guest
 feature-flags:
   outboxRelayEnable: true
   outboxRelayFixedDelay: 3000
