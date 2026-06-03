@@ -1,3 +1,10 @@
+spring:
+  datasource:
+    username: root
+    password: Rcoc2308
+  rabbitmq:
+    username: guest
+    password: guest
 feature-flags:
   outboxRelayEnable: true
   outboxRelayFixedDelay: 3000
