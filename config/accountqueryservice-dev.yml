@@ -2,3 +2,6 @@ spring:
   datasource:
     username: oguzcancambaz
     password: Rcoc2308
+  rabbitmq:
+    username: guest
+    password: guest
