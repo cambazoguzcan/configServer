@@ -5,3 +5,15 @@ spring:
   rabbitmq:
     username: guest
     password: guest
+messaging:
+  enabled: true
+  queues:
+    account_multi_queue: # account multi queue
+      queueCount: 3
+      name: account_multi_queue
+      routingKey: account_multi_queue_rk
+      exchange:
+        name: account_multi_queue_exchange
+        type: x-consistent-hash
+      arguments:
+        hash-header: accountNo
