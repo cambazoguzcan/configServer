@@ -5,6 +5,10 @@ spring:
   rabbitmq:
     username: guest
     password: guest
+inbox:
+  processor:
+    lock-at-most-for: "PT2M"
+    lock-at-least-for: "PT0S"
 messaging:
   enabled: true
   queues:
