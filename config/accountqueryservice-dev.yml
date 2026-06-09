@@ -7,6 +7,9 @@ spring:
     password: guest
 inbox:
   processor:
+    fixed-delay: 3000
+    batch-size: 100
+    max-attempts: 3
     lock-at-most-for: "PT2M"
     lock-at-least-for: "PT0S"
 messaging:
